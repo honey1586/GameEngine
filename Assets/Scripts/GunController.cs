@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    private float gittest;
     [SerializeField]
     private Gun currentGun;
 
