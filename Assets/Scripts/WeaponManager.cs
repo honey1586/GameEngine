@@ -30,12 +30,15 @@ public class WeaponManager : MonoBehaviour
     private CloseWeapon[] hands;
     [SerializeField]
     private CloseWeapon[] axes;
+    [SerializeField]
+    private CloseWeapon[] pickaxes;
 
 
     // 관리 차원에서 쉽게 무기 접근이 가능하도록 만듬.
     private Dictionary<string, Gun> gunDictionary = new Dictionary<string, Gun>();
     private Dictionary<string, CloseWeapon> handDictionary = new Dictionary<string, CloseWeapon>();
     private Dictionary<string, CloseWeapon> axeDictionary = new Dictionary<string, CloseWeapon>();
+    private Dictionary<string, CloseWeapon> pickaxeDictionary = new Dictionary<string, CloseWeapon>();
 
     // 필요한 컴포넌트
     [SerializeField]
@@ -44,6 +47,8 @@ public class WeaponManager : MonoBehaviour
     private HandController theHandController;
     [SerializeField]
     private AxeController theAxeController;
+    [SerializeField]
+    private PickaxeController thePickaxeController;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +65,10 @@ public class WeaponManager : MonoBehaviour
         {
             axeDictionary.Add(axes[i].closeWeaponName, axes[i]);
         }
+        for (int i = 0; i < pickaxes.Length; i++)
+        {
+            pickaxeDictionary.Add(pickaxes[i].closeWeaponName, pickaxes[i]);
+        }
     }
 
     // Update is called once per frame
@@ -73,6 +82,8 @@ public class WeaponManager : MonoBehaviour
                 StartCoroutine(ChangeWeaponCoroutine("GUN", "SubMachineGun1"));
             else if (Input.GetKeyDown(KeyCode.Alpha3))
                 StartCoroutine(ChangeWeaponCoroutine("AXE", "Axe"));
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+                StartCoroutine(ChangeWeaponCoroutine("PICKAXE", "Pickaxe"));
 
         }
     }
@@ -108,6 +119,9 @@ public class WeaponManager : MonoBehaviour
             case "AXE":
                 AxeController.isActivate = false;
                 break;
+            case "PICKAXE":
+                PickaxeController.isActivate = false;
+                break;
         }
     }
 
@@ -121,6 +135,9 @@ public class WeaponManager : MonoBehaviour
 
         else if (_type == "AXE")
             theAxeController.CloseWeaponChange(axeDictionary[_name]);
+
+        else if (_type == "PICKAXE")
+            thePickaxeController.CloseWeaponChange(pickaxeDictionary[_name]);
 
     }
 }

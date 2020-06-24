@@ -108,6 +108,7 @@ public class GunController : MonoBehaviour
         {
             GameObject clone = Instantiate(hit_effect_prefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal)); // 충돌한 객체의 표면을 반환하여 그 위치에 hit effect를 발생시킨다.
             Destroy(clone, 2.0f);
+            Debug.Log(hitInfo.transform.name);
         }
     }
 
