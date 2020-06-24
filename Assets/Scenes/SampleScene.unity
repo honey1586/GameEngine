@@ -5670,7 +5670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &929855940
 Transform:
   m_ObjectHideFlags: 0
@@ -6121,6 +6121,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b57f9c4d0af95ff4196066ed81c04981,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 129350255495253916, guid: b57f9c4d0af95ff4196066ed81c04981,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6419,6 +6424,8 @@ GameObject:
   - component: {fileID: 1630213289}
   - component: {fileID: 1630213290}
   - component: {fileID: 1630213291}
+  - component: {fileID: 1630213292}
+  - component: {fileID: 1630213293}
   m_Layer: 2
   m_Name: Holder
   m_TagString: Untagged
@@ -6449,7 +6456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630213287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e260efe79890424787aee94baedfd4c, type: 3}
   m_Name: 
@@ -6569,6 +6576,43 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1630213292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630213287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6a402ad263c164dbda9e5de7d3a6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponType: GUN
+  changeWeaponDelayTime: 0.1
+  changeWeaponEndDelayTime: 0.1
+  guns:
+  - {fileID: 197521401}
+  hands:
+  - {fileID: 1420512077}
+  theGunController: {fileID: 1630213290}
+  theHandController: {fileID: 1630213289}
+--- !u!114 &1630213293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630213287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90352a87f247f7428f47e11d09d5587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitPos: {x: 0.18, y: 0.1, z: 0}
+  fineSightLimitPos: {x: 0.005, y: 0.005, z: 0}
+  smoothSway: {x: 0.05, y: 0.03, z: 0}
+  theGunController: {fileID: 1630213290}
 --- !u!1 &1645303287
 GameObject:
   m_ObjectHideFlags: 0

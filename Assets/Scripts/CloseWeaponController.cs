@@ -6,7 +6,7 @@ public abstract class CloseWeaponController : MonoBehaviour
 {       //미완성 클래스 = 추상 클래스
     //현재 장착된 Hand형 타입 무기.
     [SerializeField]
-    private CloseWeapon currentCloseWeapon;
+    protected CloseWeapon currentCloseWeapon;
 
     // 공격중
     protected bool isAttack = false;
