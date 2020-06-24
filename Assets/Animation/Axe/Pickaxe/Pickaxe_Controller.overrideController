@@ -6,6 +6,34 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Animator Override Controller
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Name: Pickaxe_Controller
+  m_Controller: {fileID: 9100000, guid: 77934aa86f257834e9f271484d784a52, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 4613711402771145330, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: -7235846539770557952, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
+  - m_OriginalClip: {fileID: 4781951162920444690, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: 4781951162920444690, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
+  - m_OriginalClip: {fileID: -8695580576359653604, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: 2651839315143775813, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
+  - m_OriginalClip: {fileID: 8823665244048482169, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: 367563601727614483, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
+  - m_OriginalClip: {fileID: 59665523126103490, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: 6562484219463903026, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
+  - m_OriginalClip: {fileID: -5270651720234473535, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: 1852846420727231279, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
+  - m_OriginalClip: {fileID: -5311983957153539938, guid: 419044c8ad448d347b406d71f59a76b3,
+      type: 3}
+    m_OverrideClip: {fileID: 462917566158205536, guid: 41c9108a78545f4499407c780f052715,
+      type: 3}
