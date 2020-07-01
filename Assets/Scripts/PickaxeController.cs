@@ -14,7 +14,7 @@ public class PickaxeController : CloseWeaponController
     }
     void Update()
     {
-        if (isActivate)
+        if (isActivate && GameManager.canPlayerMove)
             TryAttack();
     }
     protected override IEnumerator HitCoroutine()

@@ -35,7 +35,10 @@ public class WeaponSway : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TrySway();
+        if (GameManager.canPlayerMove)
+        {
+            TrySway();
+        }
     }
 
     private void TrySway()

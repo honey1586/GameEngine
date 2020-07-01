@@ -9,7 +9,7 @@ public class AxeController : CloseWeaponController
 
     void Update()
     {
-        if (isActivate)
+        if (isActivate && GameManager.canPlayerMove)
             TryAttack();
     }
     protected override IEnumerator HitCoroutine()
