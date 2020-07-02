@@ -101,11 +101,15 @@ public class Zombie : MonoBehaviour
             hp -= _damage;
 
         if (hp <= 0)
+        {
+            anim.SetTrigger("Dead");
             Dead();
+        }
     }
 
     private void Dead()
     {
+        
         Destroy(go_zombie);
         Debug.Log("좀비 죽었음.");
     }
